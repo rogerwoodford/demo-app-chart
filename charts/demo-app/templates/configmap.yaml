@@ -4,5 +4,8 @@ metadata:
   name: nginxdata
 data:
   index.html: |
-    <h1 style="font-size:40px">Hello World!!</h1></br></br>
-    <p style="font-size:30px">{{ .Chart.Name }} : {{ .Chart.Version }}</P>
+    <h1 style="font-size:40px">{{ .Values.message }}</h1></br></br>
+    <p style="font-size:30px">Chart Name : {{ .Chart.Name }}</P>
+    <p style="font-size:30px">Chart Version : {{ .Chart.Version }}</P>
+    <p style="font-size:30px">Release Name : {{ .Release.Name }}</P>
+

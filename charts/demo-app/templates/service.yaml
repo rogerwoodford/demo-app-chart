@@ -6,7 +6,7 @@ spec:
   type: LoadBalancer
   ports:
     - name: http
-      port: 9500
+      port: {{ .Values.port   }}
       protocol: TCP
       targetPort: 80
   selector:
