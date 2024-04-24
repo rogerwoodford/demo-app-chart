@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: {{ include "demo-app.fullname" . }}
   labels:
-    app: nginx
+    {{- include "demo-app.labels" . | nindent 4 }}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nginx
+     {{- include "demo-app.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       labels:
-        app: nginx
+        {{- include "demo-app.selectorLabels" . | nindent 8 }}
       annotations:
         rollme: {{ randAlphaNum 5 | quote }}
     spec:
@@ -27,4 +27,4 @@ spec:
       volumes:
       - name: html
         configMap:
-          name: nginxdata
+          name: {{ include "demo-app.fullname" . }}
