@@ -2,6 +2,13 @@ apiVersion: v1
 entries:
   demo-app:
   - apiVersion: v2
+    created: "2024-04-25T00:00:10.672563167Z"
+    digest: a8545e74fc60ecf8e3590248e8136d757b3023713741a289596967678f23fdda
+    name: demo-app
+    urls:
+    - https://github.com/rogerwoodford/demo-app-chart/releases/download/demo-app-1.0.3/demo-app-1.0.3.tgz
+    version: 1.0.3
+  - apiVersion: v2
     created: "2024-04-24T23:55:20.245937534Z"
     digest: c21bded66c69baa2b00840145026a04826417a2c69de366aefa6aa7e37a63441
     name: demo-app
@@ -29,4 +36,4 @@ entries:
     urls:
     - https://github.com/rogerwoodford/demo-app-chart/releases/download/demo-app-0.0.0/demo-app-0.0.0.tgz
     version: 0.0.0
-generated: "2024-04-24T23:55:20.245953424Z"
+generated: "2024-04-25T00:00:10.672592111Z"
